@@ -1,0 +1,143 @@
+//VARIABLES
+$black: #111417;
+$skyblue: #55ACEE;
+$blue: #2E6296;
+$softsilver: #F4F5F7;
+$silver: #F2F2F2;
+$darksilver: #768696;
+$red: #BA1414;
+$Oswald: "Oswald", Arial, sans-serif+!important;
+$PTSans: "PT sans", Arial, sans-serif+!important;
+//MIXIN
+@mixin titulos($fsize, $fw, $mg, $family, $color) {
+    font-size: $fsize;
+    font-weight: $fw;
+    margin: $mg;
+    font-family: $family;
+    color: $color;
+}
+//Media
+.media{
+    margin-top: 0;
+    .media-body {
+        width: 10000px;
+        h5 {
+            @include titulos(11px, 400, 0 0 3px, $Oswald, $black);
+        }
+        p {
+            @include titulos(15px, 700, 0, $PTSans, $darksilver);
+            line-height: 15px;
+            height: 45px;
+        }
+    }
+}
+.media, .media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media>.pull-left {
+    padding-right: 10px;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.boxblog {
+    padding: 10px;
+    background-color: $softsilver;
+    img {
+        border: 2px solid #fff;
+        width: 50px;
+        height: 55px;
+    }
+}
+//section blog
+#blogs, #columnistas, .columnistas{
+    h1 { @include titulos(50px, 700, 35px 0, $PTSans, $black);}
+    h3 { 
+        @include titulos(18px, 400, 0 0 30px, $Oswald, $darksilver);
+        i {
+            font-size: 24px;
+            color: $red;
+            margin-left: 8px;
+        }
+    }
+    .relative {
+        position: relative;
+        padding: 10px;
+        border: 2px solid $softsilver;
+        margin-bottom: 20px;
+        .blogs {
+            text-align: center;
+            p {
+                @include titulos(13px, 400, 25px 0 5px, $PTSans, $black);
+            }
+            h4 {
+                @include titulos(20px, 700, 0 0 50px, $PTSans, $black);
+                height: 30px;
+            }
+        }
+    }
+}
+#button {
+    text-align: center;
+    margin: 20px auto 50px;
+    width: 250px;
+    button {
+        background-color: $red;
+        border: 1px solid $red;
+        border-radius: 2px;
+        padding: 1px 30px;
+        @include titulos(15px, 400, 0, $PTSans, #fff);
+    }
+}
+header {
+    .list-group-1 {
+        background-color: $red;
+        padding: 0 20px 20px;
+        margin-bottom: 15px;
+        width: 100%;
+        text-align: center;
+        &.list-group-2 {
+            display: inline-block;
+            margin-left:-4px;
+            margin-right: 0;
+        }   
+        .list-group-item-a {
+            @include titulos(15px, 400, 0px, $PTSans, #fff);
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            padding: 3px 15px;
+            border-radius: 10px;
+            margin: 20px 5px 0;
+            &:hover {
+                background-color: red;
+            }
+            &:nth-child(2) {
+                background-color: red;
+            }
+            &:first-child {
+                margin-left: 20px;
+                background-color: darken($red, 20);
+                margin-left: 0px;
+            }
+            &:last-child {
+                margin-right: 10px;
+            }
+        }
+    }
+    .row {
+        padding: 0 5px;
+        .col-md-4.col-sm-8.col-xs-16 {
+            padding: 2px;
+            .boxblog {
+        
+            }
+        }
+    }
+}

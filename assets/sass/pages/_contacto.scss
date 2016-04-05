@@ -1,0 +1,63 @@
+// Section Contact 
+#contacto {
+	padding:30px;
+	.descripcion{
+		margin: 0;
+	}
+	form {
+		input {
+		height: 30px;
+		}
+		textarea {
+			height: 200px;
+		}
+		input, textarea {
+			width: 100%;
+		    margin-top: 20px;
+		    background: $softsilver;
+		    padding-left: 10px;
+		    font-size: 12px;
+		    @include box-shadow(inset, 2px, 2px, 0, rgba(165, 165, 165, 0.5));	
+		    border: none;
+		    margin-bottom: 20px;
+		    border-radius:5px;
+		}
+		button {
+			@include linear-gradient($black, $boldblack);
+			color: white;
+		    width: 50%;
+		    padding: 10px;
+		    display: block;
+		    margin: 0 auto;
+			border-radius: 5px;
+    		border: none;
+		}
+	}
+	.row {
+		margin:0;
+	} 
+	.radio { 
+		display: flex;
+    	justify-content: space-between;
+		p {
+			font-size: 12px;
+	 	}
+	}
+}
+
+// Responsive contact
+@media (max-width: 750px){ 
+	.cont-contact {
+		width: 100%;
+		margin: 0;
+	}
+}
+@media (max-width: 960px){ 
+	.radio {
+		display: block!important;
+	}
+	p {
+		margin-left: 20px;
+	}
+}
+ 

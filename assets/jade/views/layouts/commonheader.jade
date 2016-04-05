@@ -1,0 +1,45 @@
+section#header.headerpublicity.container-fluid
+	.row
+		.col-md-offset-2.col-md-12.clearfix
+			+jpg("banner_top")
+			+headerlistleft(headerfirstlist)
+			ul.list-unstyled.pull-right.text-right
+				li.list-inline 
+					a.label.label-danger(href="#") SUSCRÍBETE AL BOLETÍN
+				li.list-inline
+					a.fa.fa-facebook(href="#")
+				li.list-inline
+					a.fa.fa-twitter(href="#")
+				li.list-inline
+					a.fa.fa-google-plus(href="#")
+				li.list-inline
+					a.fa.fa-envelope(href="#")
+				li.list-inline
+					a.fa.fa-rss(href="#")
+				li.list-inline
+					div.input
+						input#search(type="search" placeholder="Buscar")
+						label(for="search-input")
+							a.fa.fa-search
+
+header.container-fluid.text-center
+	.row
+		.col-md-offset-2.col-md-4
+			#headerlogo
+				+jpg("logo-la-republica")
+		.col-md-4
+			#especialnews
+				span.especialtitle ESPECIAL DE FÚTBOL
+				br
+				span.textheader TODO SOBRE LA CHAMPIONS LEAGUE
+		.col-md-4
+			#editorial
+				.editorialtext
+					span.textheader La corrupción, los orígenes
+					br
+					span.italic!= italic
+					.facebox
+						+jpg("img_author")
+	.row
+		.col-md-offset-2.col-md-12
+			+firstnav(navred)

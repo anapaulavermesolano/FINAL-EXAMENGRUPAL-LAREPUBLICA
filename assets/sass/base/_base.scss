@@ -1,0 +1,60 @@
+img {
+	width: 100%;
+}
+h1 {
+	color: $black;
+	font: bold 3.5em $PTSans;
+}
+h2 {
+	font-family: $Oswald;
+}
+.media, .media-body {
+	overflow: hidden;
+	zoom: 1;
+}
+.media-left, .media-body {
+	display: table-cell;
+	vertical-align: top;
+}
+.ptext{
+	font-weight: bold;
+}
+.list-inline {
+	display: inline-block;
+}
+.textheader {
+	font: bold 0.8em $PTSans;
+}
+.italic {
+	font: normal 0.8em $PTSans;
+}
+.fa-facebook {
+	color: $blue;
+}
+.fa-twitter {
+	color: $skyblue;
+}
+.fa-google-plus, .fa-youtube-play {
+	color: $red;
+}
+.fa-envelope {
+	color: $yellow;
+}
+.fa-rss {
+	color: $orange;
+}
+.fa-circle {
+	color: $darksilver;
+	font-size: 0.4em;
+}
+#htmlnav {
+	text-align: center;
+	margin-bottom: 30px!important;
+	margin: 0 auto;
+	width: 100%;
+	.list-group-item {
+		background: $silver;
+		color: $darksilver;
+		width: 25%;
+	}
+}

@@ -1,0 +1,196 @@
+include helpers/variables
+include helpers/mixins
+doctype html
+html(lang='es-PE')
+	head
+		title Home
+		include layouts/head
+	body
+		include layouts/commonheader
+		#main
+			section#main_home.container-fluid
+				.row
+					.hidden-sm.col-md-2.asidebanner
+						+jpg("banner_left")
+					.col-md-12
+						+htmlnav(linkhtml)
+						+jpg("banner-header")
+						h1.text-center GUERRA EN LA MUNICIPALIDAD DE LIMA METROPOLITANA
+						ul.social-list.list-unstyled
+							li.list-inline
+								a(href="#").social-box.fa.fa-facebook
+							li.list-inline
+								a(href="#").social-box.fa.fa-twitter
+							li.list-inline
+								a(href="#").social-box.fa.fa-google-plus
+							li.list-inline
+								i.fa.fa-circle
+								| Hace 12 minutos
+								i.fa.fa-circle
+							li.list-inline POLÍTICA
+						
+						section#news
+							.row
+								.col-md-8
+									+jpg("img_grid_principal")
+								.col-md-8
+									+jpg("img_grid_secundario")
+									+jpg("img_grid_secundario_abajo")
+
+						section#slide_columnistas
+							h2.titlecol COLUMNISTAS
+							section.responsive.slider.slider-item
+								+autorslide()
+								+autorslide()
+								+autorslide()
+
+						section#last_news
+							.row
+								.col-md-11
+									.row
+										+boxlastnew("Mercado de Pases 2015", "img_especiales", "Mercado de pases 2015: altas, bajas y rumores de los equipos peruanos")
+										+boxlastnew("Régimen laboral juvenil", "img_especiales_aside", "Ollanta Humala: Los que han perdido, más allá de tambores y panderetas, son 2 millones de jóvenes | VIDEO")
+									.row
+										+boxlastnew("Champions League", "img_especiales_aside", "¿Podrá el Real Madrid conseguir la 'Undécima'?")
+										+boxlastnew("Super Bowl", "img_especiales", "Super Bowl XLIX: New England Patriots se consagrí campeón la NFL al ganar 28-24 a Seahawks | VIDEO")
+									section#all_news
+										h3 ÚLTIMAS NOTICIAS
+											i.fa.fa-angle-double-down
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+										+firstboxnew()
+
+								.col-md-5.aside
+									+jpg("banner-aside-home")
+									.box-aside.text-center
+										.form
+											+pngmedia2("img_sucribe")
+											p
+												span Suscríbete 
+												| a nuestro boletín
+											.center
+												input(type="text" name="text" class="form-control" required="required" placeholder="")
+												button SUSCRIBIRSE
+									.aweita.text-center
+										+jpgmedia2("logo_aweita")
+										+mediaside("img_aweita", "Juan Román Riquelme, el adiós al 'Último 10' de Argentina", " ")
+										+mediaside("img_aweita", "Lewis Carrol: in día como hoy nació el autor de Alicia en el...", " ")
+										+mediaside("img_aweita", "Juan Román Riquelme, el adiós al 'Último 10' de Argentina", " ")
+										+mediaside("img_aweita", "Gameplay de 'Dead Kings', el descargable premiuk de 'Assassin's")
+										p Más en 
+											a Aweita.pe
+										hr.lila
+									.fotos-destacadas
+										p.box-fotos FOTOS DESTACADAS
+										+jpgmedia2("img_fotodes_prominent")
+										p Líneas de Nasca: admitan prisión preventiva de 6 meses para activista de Greenpeace | FOTOS
+										+mediaside("img_fotodes", "Uchuraccay: El pueblo que recibe con flores a quienes llegas a pie | FOTOS", " ")
+										+mediaside("img_fotodes", "Alianza Lima vs Fénix: intimos ganaron 1-0 en 'noche Blanquiazul' | VIDEO Y FOTOS", " ")
+										+mediaside("futbol", "Tomas Berdych derrotó 3-0 a Rafael Nadal y avanzó en el Australian Open | FOTOS", " ")
+									.especiales
+										p.box-fotos ESPECIALES
+										+namefotos2("img_especiales_aside", "Régimen laboral juvenil", " ")
+										+namefotos2("img_fotodes_prominent", "COP 20", " ")
+										+namefotos2("img_especiales_aside", "Conentracion de Medios", " ")
+										+namefotos2("img_fotodes_prominent", "Especies peruanas en peligro de extición", " ")
+									.carlincatura.text-center
+										p.box-fotos CARLINCATURA DEL DÍA
+										p.carli Carlincaturas 30-01-2015
+										+jpgmedia2("img_carlincatura_sd")
+										a Todas las Carlincaturas
+									.bloqueros
+										p.box-fotos NUESTROS BLOQUEROS
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "Charlie Hebdo historia que no debe repetirse")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "El único pulpín")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "Dios ha muerto... tengo las manos")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "Charlie Hebdo historia que no debe repetirse" )
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "El único pulpín")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "Dios ha muerto... tengo las manos")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "Charlie Hebdo historia que no debe repetirse")
+										+bloqueros("img_blogueros", "Augusto Álvarez Rodrich", "El único pulpín")
+										p.red Todo los blogs
+									.edicion
+										p.box-fotos EDICIÓN IMPRESA
+										P.lima La Republica - Lima
+										+jpgmedia2("img_impreso_sd_prominent")
+									.notices
+										+newpaper("img_impreso_sd", "Extocionan a colegios", "La República - Norte")
+										+newpaper("news-2", "Lluvias en Aequipa inundan casas y causan caos en calles", "La República - Sur")
+										+newpaper("news", "El Ojo de Oblitas", "Domingo")
+									.especiales
+										p.box-fotos INOFOGRAFÍAS
+										+namefotos2("img_especiales_aside", "Histórico cierre de frontera", " ")
+										+namefotos2("img_fotodes_prominent", "Evolución de la pobreza e indigencia en América Latina", " ")
+									.votar
+										.form(style="margin-top: 45px;")
+											+pngmedia2("img_pregunta")
+											span La pregunta de hoy
+											p ¿Cree usted que la premier Ana Jara debe renunciar?
+											form(action="demo_form.asp" method="get")
+												input(type="radio" name="si" value="Sí")
+												|   Sí
+												br
+												input(type="radio" name="no" value="No")
+												|   No
+											button VOTAR
+											a.red Ver resultados
+										.form
+											span La pregunta de ayer
+											p ¿Cree usted que se militarizó la conmemoración del fallo de la Haya en Lima?
+												.progress
+													.progress-bar(role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100" style="width: 55%; background-color: #8DE08D;")
+														p.value 55%
+													.progress
+														.progress-bar(role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="width: 25%; background-color: #F74760;")
+															p.value 25%
+													a.red Ver preguntas pasadas
+									.libero
+										.form
+											+jpgmedia2("logo_libero")
+										+namefotos("futbol-1", "Fiorentina empató 1-1 en su visita al Genoa con gran actuación de Juan Vargas [VIDEO]")
+										+namefotos("futbol-2", "Jefferson Farfán: Schalke 04 tampoco sabe cuando volverá a la canchas [FOTOS]")
+										+namefotos("futbol-3", "Barcelona vs. Villareal: culés ganaron 3-2 con goles de Lionel Messi y Neymar por Liga BBVA [VIDEO]")
+										+namefotos("futbol-4", "Jefferson Farfán: Schalke 04 tampoco sabe cuando volverá a la canchas [VIDEO/FOTOS]")
+										p.center Más en 
+											a.red Libero.pe
+										hr
+									.popular
+										+jpgmedia2("logo_popular")
+										+namefotos("popular-1", "Joshua Ivanoff está loco por olor de Melissa Loza")
+										+namefotos("popular-2", "Corinthians: Paolo Guerrero dedica su gol a Alondra García")
+										+namefotos("popular-3", "Angie Arizaga es amenazada de muerte (VIDEO)")
+										+namefotos("popular-4", "Philip Seymour Hoffman: Un año sin el premiado actor (VIDEO)")
+										p.center Más en 
+											a.red elPopular.pe
+										hr
+									.wapa
+										+jpgmedia2("logo_wapa")
+										+namefotos("wapa-1", "¿Cómo renovar el guardaropa de los pequeños en este verano?")
+										+namefotos("wapa-2", "Shakira y Piqué !Ya son padres por segunda vez!")
+										+namefotos("wapa-3", "Ted 2: Mira el Trailer de la cinta")
+										+namefotos("wapa-4", "Cómo usar zapatos altos sin dolor")
+										p.center Más en 
+											a.red Wapa.pe
+										hr
+									.reportero.text-center
+										.cymera
+											.form
+												+pngmedia2("img_reporteroc")
+											p.center
+												span Reportero ciudadano
+											+jpgmedia2("img_sd_reporteroc")
+											h5 Estacionamiento indebido
+											p.left ¿Está permitido que dejen su auto en reiteradas ocasiones toda la noche en la puerta de t casa? Placa DG6232, eso que antes lo dejaba entre la vereda y mi puerta.
+										button ENVIAR FOTOS
+										p
+											a Más fotos
+					.hidden-sm.col-md-2.asidebanner
+						+jpg("banner_right")
+		include layouts/footer
+		include layouts/script

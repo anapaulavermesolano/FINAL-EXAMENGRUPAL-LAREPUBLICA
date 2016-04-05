@@ -1,0 +1,104 @@
+include helpers/variables
+include helpers/mixins
+include helpers/baseana
+doctype html
+html(lang='es-PE')
+    head
+        include layouts/head
+        link(rel='stylesheet', type='text/css', href='assets/css/mainana.css')
+    body
+        include layouts/commonheader
+        #main
+            section#main_blogs.container-fluid
+                .row
+                    .hidden-sm.col-md-2.asidebanner
+                        +jpg("banner_left")
+                    .col-md-12
+                        +htmlnav(linkhtml)
+                        +jpg("banner-header")
+                        section#columnistas
+                            +section("Columnistas", "LO ÚLTIMO EN COLUMNISTAS")
+                            +blogs("El gol de la muerte", "blog_avatar_01",  "Claro y directo", "Observador", "Chino de mi barrio", "blog_avatar_02", "blog_avatar_03", "Augusto    Álvarez Rodrich", "Miko Laurer", "Aldo Miyashiro")
+                            +blogs("El gol de la muerte", "blog_avatar_01",  "Tiro al blanco", "Cristal de Mira", "Jeque Perpetuo", "blog_avatar_02", "blog_avatar_03", "Fransisco Durand", "Humberto Campodónico", "Javier Ágreda")
+                            +blogs("El gol de la muerte", "blog_avatar_01",  "Claro y directo", "Observador", "Chino de mi barrio", "blog_avatar_02", "blog_avatar_03", "Augusto Álvarez Rodrich", "Miko Laurer", "Aldo Miyashiro")
+                            +blogs("El gol de la muerte", "blog_avatar_01",  "Tiro al blanco", "Cristal de Mira", "Jeque Perpetuo", "blog_avatar_02", "blog_avatar_03", "Fransisco Durand", "Humberto Campodónico", "Javier Ágreda")
+                            section#button
+                                button TODAS LAS COLUMNAS
+                            section.columnistas
+                                +section("", "TODOS LOS COLUMNISTAS")
+                            header
+                                +headernavbar(navbar)
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("blog_avatar_02","Tiro al blanco" ,"francisco Durand")
+                                    +columnistas("img-columnistas", "Cristal de Mira", "Humberto Campodónico")
+                                    +columnistas("img_blogueros", "Jarque Perpetuo", "Javier Ágreda")
+                                    +columnistas("img_author_columnista", "Defensa", "Javier Ágreda")
+                                .row
+                                    +columnistas("aside-perfil-img-01", "Delito de Opinión", "francisco Durand")
+                                    +columnistas("blog_avatar_03", "Actualidad Econo. - Oscar Dancourt", "Humberto Campodónico")
+                                    +columnistas("blog_avatar_01", "Mirada externa", "Javier Ágreda")
+                                    +columnistas("img_grid_principal", "Defensa", "Javier Ágreda")
+                    .hidden-sm.col-md-2.asidebanner
+                        +jpg("banner_right")
+        include layouts/footer
+        include layouts/script

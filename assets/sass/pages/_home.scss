@@ -1,0 +1,535 @@
+// SECTION HEADER PUBLICITY
+.headerpublicity {
+	background-color: $softsilver;
+	border-bottom: 2px solid darken($silver, 5);
+	img {
+		width: 100%;
+	}
+	.list-unstyled {
+		width: 50%;
+		.list-inline {
+			margin: 0 1.3% 0 0;
+			color: $darksilver;
+			font: bold 0.8em $PTSans;
+			.input {
+				position: relative;
+				#search {
+					@include shadow-inset(1px, 0px, 0px, $white);
+					background: none;
+					border-style: none;
+					border-left: 1.7px double darken($silver, 12);
+					border-right: 1.7px double darken($silver, 12);
+					width: 70px;
+				}
+				label {
+					position: absolute;
+					top: 0;
+					right: 5px;
+				}
+			}
+		}
+	}
+}
+
+// SECTION HEADER LOGO
+header {
+	margin: 2% 0;
+	img {
+		width: auto;
+	}
+	#especialnews {
+		border: 2px solid $silver;
+		border-bottom: 3px solid $black;
+		margin: 0 auto;
+		width: 84%;
+		.especialtitle {
+			@include shadow(1px, 1px, 3px, $darksilver);
+			@include font($softsilver, bold, 0.75em, $Kameron);
+			background-color: darken($darksilver, 20);
+			padding: 2px 5px;
+			position: relative;
+			top: -10px;
+		}
+	}
+	#editorial {
+		@include shadow(-2px, 0px, 2px, $darksilver);
+		background: url(../image/img_editorial_text.jpg) no-repeat;
+		background-color: lighten($black, 12);
+		.editorialtext {
+			@include radius(10px);
+			background-color: $white;
+			margin-left: 15px;
+			position: relative;
+			.facebox {
+				position: absolute;
+				top: -12px;
+				right: 0;
+			}
+		}
+	}
+}
+
+.list-group {
+	&.list-group-horizontal {
+		display: inline-block;
+		margin: 0 0 0 -4px;
+	}
+	.list-group-item {
+		@include font($white, normal, 0.7em, $PTSans);
+		background-color: $red;
+		display: inline-block;
+		margin: 0px 0px 0px -4px;
+		position: relative;
+    padding: 10px 15px;
+    border: 1px solid darken($red, 20);
+		&:first-child {
+			@include someradius(4px, 0, 0, 4px);
+		}
+		&:last-child {
+			@include someradius(0, 4px, 4px, 0px);
+		}
+	}
+}
+
+@mixin socialboxshadow($color){
+	margin: 0;
+	.social-box{
+		@include shadow(0px, 4px, 0px, $color);	
+		margin: 0 4px;
+	}
+}
+
+// SLIDE COLUMNISTAS
+#slide_columnistas {
+	background-color: $silver;
+	border-top: 6px solid $red;
+	margin: 20px 0;
+	padding-bottom: 20px;
+	text-align: center;
+	.borderimg {
+		border: 5px solid $white;
+		margin: 0 auto;
+		width: 80px!important;
+	}
+	p.colautor {
+		font-size: 0.7em!important;
+	}
+	p.coltitle {
+		padding: 0 10px;
+	}
+	h2.titlecol {
+		@include font($white, normal, 1.2em, $Oswald);
+		background-color: $red;
+		text-align: center;
+		display: table;
+		margin: 0 auto;
+		padding: 0 10px;
+		position: relative;
+    top: -10px;
+	}
+}
+// #slider {
+// 	.items {
+// 		width: 900px!important;
+// 		.columns {
+// 			float: left;
+// 		}
+// 	}
+// }
+// MAIN CONTENT HOME
+.social-list {
+	@include font($darksilver, bold, 0.75em, $PTSans);
+	text-align: center;
+	position: relative;
+	li {
+		margin: 0 2%;
+		&.list-inline:first-child {
+			@include socialboxshadow($blue);
+		}
+		&.list-inline:nth-child(2) {
+			@include socialboxshadow($skyblue);
+		}
+		&.list-inline:nth-child(3) {
+			@include socialboxshadow($red);
+		}
+	}
+}
+.social-box {
+	@include radius(4px);
+  background-color: darken($silver, 6);
+  font-size: 1.2em;
+  position: relative;
+  display: inline-block;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.9em;
+  margin-right: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+#main_home {
+	img {
+		width: 100%;
+	}
+}
+#last_news {
+	.box-last-new {
+		border: 1px solid darken($silver, 12);
+		text-align: center;
+		.titlenew {
+			@include font($red, bold, 1.2em, $PTSans);
+			position: relative;
+			margin: 20px 0;
+		}
+		p {
+			margin: 10px 0;
+		}
+	}
+}
+p {
+	@include font($black, normal, 0.9em, $PTSans);
+	&.newsdate {
+		font-size: 0.7em!important;
+	}
+}
+.lastnew-photo {
+	position: relative;
+	.lastnew-gradient {
+		@include gradientbox();
+		position: absolute;
+		text-align: left;
+		height: 80%;
+		width: 100%;
+		bottom: 0;
+		.titlelastnew {
+			@include text-shadow(2px, 2px, 2px, $black);
+			@include font($white, bold, 1.1em, $PTSans);
+			padding: 0 10px;
+			text-align: left;
+			position: absolute;
+			bottom: 10px;
+		}
+	}
+}
+
+// SECTION ALL NEWS
+#all_news {
+	h3 {
+		font-size: 18px;
+		font-weight: 400;
+		margin: 0 0 30px;
+		font-family: "Oswald", Arial, sans-serif!important;
+		color: #768696;
+		i {
+			font-size: 24px;
+	    color: #BA1414;
+	    margin-left: 8px;
+		}
+	}
+	h4 {
+		@include font($black, bold, 1.4em, $PTSans)
+	}
+	.media-left {
+		padding-right: 20px;
+	}
+	img {
+		width: auto;
+	}
+	.boxnews {
+		border-bottom: 1px solid darken($silver, 12);
+    padding: 20px 0;
+		.media-body {
+			.social-news {
+				display: inline-block;
+				a {
+					@include socialboxes($blue, $skyblue, $red);
+				}
+			}
+			.fa-circle {
+				margin: 0 20px;
+			}
+			a {
+				font-size: 0.7em!important;
+			}
+		}
+	}
+}
+
+.img-responsive {
+	margin: auto;
+}
+.center {
+	text-align: center;
+}
+.progress {
+    height: 30px;
+    margin-bottom: 20px;
+    background: url('../image/barprogress_bg.jpg')repeat;
+    overflow: hidden;
+    .value {
+    	@include titulos(15px, 400, 5px auto, $Oswald, $black);
+    	text-align: center;
+    }
+}
+.progress-bar {
+	float: left;
+	width: 0;
+	height: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: #fff;
+	text-align: center;
+	background-color: #337ab7;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+	-webkit-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+.media{
+    margin-top: 0;
+    .media-body {
+    	width: 10000px;
+    	h5 {
+    		@include titulos(11px, 400, 0 0 3px, $Oswald, $black);
+    		text-align: left;
+    		&:hover {
+    			color: gray;
+    		}
+    	}
+    	p {
+    		@include titulos(13px, 700, 0, $PTSans, $black);
+    		text-align: left;
+    		&:hover {
+    			color: gray;
+    		}
+    	}
+	}
+}
+.media, .media-body {
+    overflow: hidden;
+    zoom: 1;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.media-left, .media>.pull-left {
+    padding-right: 10px;
+}
+.media-body, .media-left, .media-right {
+    display: table-cell;
+    vertical-align: top;
+}
+.boxblog {
+	padding: 10px;
+	img {
+		&:hover {
+			border: 2px solid gray;
+		}
+	}
+}
+.red {
+	color: $red;
+}
+.form {
+	background-color: #fff;
+	padding:10px;
+	position: relative;
+	img {
+		position: absolute;
+		top: -33px;
+    	left: 105px;
+	}
+}
+button {
+	background-color: $red;
+	width: 100%;
+	border: 1px solid $red;
+	@include titulos(15px, 700, 0, $PTSans, #fff);
+}
+.box-aside {
+	background: url('../image/archive-sidebar-bg.jpg')repeat;
+	padding: 50px 10px 10px;
+	p {
+		@include titulos(20px, 400, 30px 0 0, $PTSans, $black);
+		span {
+			font-weight: bold;
+		}
+	}
+	.center {
+		padding: 0 12px;
+		input{
+			background-color: $silver;
+			margin: 10px 0;
+		}
+	}
+}
+.aweita {
+	padding: 10px;
+	margin: 40px 0;
+	position: relative;
+	border: 1px solid $darksilver;
+	p {margin: 0 auto -7px;}
+	a {
+		color: purple;
+	}
+	hr {
+		@include borde(120px, 5px solid purple);
+	}
+}
+.fotos-destacadas {
+	margin: 20px 0;
+	padding: 10px;
+	@include box-fotos(5px solid gray, gray, 150px);
+	img {
+		border: 2px solid gray;
+	}
+	p {@include titulos(17px, 700, 10px 0 0, $PTSans, gray);}
+}
+.especiales {
+	margin: 30px 0;
+	padding: 10px;
+	@include box-fotos(5px solid gray, gray, 150px);
+	.whitetext {
+		background-color: rgba(251, 249, 249, 0.86);
+		@include titulos(15px, 700, 0 auto, $PTSans, $black);
+		padding: 10px;
+		width: 95%;
+		position: relative;
+		top: -55px;
+		line-height: 13px;
+		text-align: center;
+	}
+}
+.carlincatura {
+	margin: 20px 0;
+	padding: 10px;
+	@include box-fotos(5px solid $red, $red, 180px);
+	.carli {
+		@include titulos(20px, 700, 0 auto 15px, $PTSans, $black);
+	}
+	a {
+		@include titulos(17px, 700, 20px auto, $PTSans, $red);
+	}
+}
+.bloqueros {
+	margin: 30px 0;
+	padding: 10px;
+	@include box-fotos(5px solid gray, gray, 170px);
+	a {
+		@include titulos(12px, 700, 5px 0, $PTSans, gray);
+		border-bottom: 1px solid gray;
+	}
+	p {
+		@include titulos(17px, 700, 5px auto, $PTSans, $black);
+	}
+	.red {
+		@include titulos(15px, 700, 15px auto !important, $PTSans, $red);
+		text-align: center;
+	}
+}
+.edicion {
+	margin: 20px 0;
+	padding: 10px;
+	@include box-fotos(5px solid $red, $red, 180px);
+}
+.notices {
+	padding: 10px;
+	.lima {
+		@include titulos(20px, 700, 5px auto, $PTSans, $black);
+		text-align: center;
+	}
+	img {
+		border: 1px solid gray;
+	}
+	a {
+		@include titulos(12px, 700, 5px auto, $PTSans, $red);
+		border-bottom: 1px solid $red !important;
+	}
+}
+.votar {
+	background: url('../image/archive-sidebar-bg.jpg')repeat;
+	padding: 50px 10px 10px;
+	text-align: center;
+	.form {
+		margin-top: 10px;
+	}
+	span{
+			@include titulos(20px, 700, 0px auto 0, $PTSans, $black);
+	}
+	p {
+		@include titulos(14px, 400, 5px auto, $PTSans, $black);
+		text-align: left;
+	}
+	button {
+		width: 70%;
+		margin: 20px auto;
+	}
+	a {
+		@include titulos(15px, 700, 5px auto, $PTSans, $red);
+		display: block;
+	}
+}
+.libero {
+	margin-top: 40px;
+	border: 1px solid gray;
+	padding:10px;
+	a {
+		color: #DC0773;
+	}
+	hr {
+		@include borde(120px, 5px solid #DC0773);
+	}
+}
+.popular {
+	margin-top: 40px;
+	border: 1px solid $darksilver;
+	padding:10px;
+	a {
+		color: #DC0773;
+	}
+	hr {
+		@include borde(120px, 5px solid yellow);
+	}
+}
+.wapa {
+	margin-top: 40px;
+	border: 1px solid $darksilver;
+	padding:10px;
+	a {
+		color: #DC0773;
+	}
+	hr {
+		@include borde(120px, 5px solid #DC0773);
+	}
+}
+.reportero {
+	background: url('../image/archive-sidebar-bg.jpg')repeat;
+	padding: 50px 10px 10px;
+	.cymera {
+		background-color: #fff;
+		padding: 10px;
+		.center {
+			@include titulos(20px, 700, 30px auto 0, $PTSans, $black);
+		}
+		h5 {
+			@include titulos(15px, 700, 15px auto, $PTSans, $black);
+		}
+		p {
+			@include titulos(15px, 400, 0, $PTSans, $black);
+		}
+		.left {
+			text-align: left;
+		}
+	}
+	a {
+		@include titulos(17px, 700, 0px auto, $PTSans, $red);
+		display: block;
+	}
+	button {
+		width: 70%;
+		margin: 20px auto 10px;
+	}
+}
+

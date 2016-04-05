@@ -1,0 +1,195 @@
+//- MIXINS
+-var htmlnav = [{name:'HOME', url:'home.html'},{name:'BLOGS', url:'blogs.html'},{name:'COLUMNISTAS', url:'columnistas.html'},{name:'CONTACTO', url:'contacto.html'}]
+
+mixin htmlnav(firstnavred)
+	#htmlnav.list-group.list-group-horizontal
+		each linkhtml in htmlnav
+			a.list-group-item(href='#{linkhtml.url}') #{linkhtml.name}
+
+mixin jpg(imgjpg)
+	img(src="assets/image/" + imgjpg + ".jpg")
+
+mixin png(imgpng)
+	img(src="assets/image/" + imgpng + ".png")
+
+mixin headerlistleft(headerfirstlist)
+	ul.list-unstyled.pull-left
+		each list in headerfirstlist
+			li.list-inline #{list.name}
+
+mixin firstnav(firstnavred)
+	.list-group.list-group-horizontal
+		each navred in headerfirstnav
+			a.list-group-item(href='#{navred.url}') #{navred.name}
+
+mixin boxlastnew(title, img, titlelastnew)
+	.col-md-8
+		.box-last-new
+			h3.titlenew= title
+			.lastnew-photo
+				+jpg(img)
+				.lastnew-gradient
+					a.titlelastnew(href="#")= titlelastnew 
+			p Todo sobre 
+				span.ptext= title
+
+mixin boxnews(title, img, mediaparrafo)
+	.boxnews
+		p.newsdate Hace 1 hora 12 mins
+		h4= title
+		.media
+			.media-left
+				+jpg(img)
+			.media-body
+				p= mediaparrafo
+				.social-news
+					a(href="#").social-box.fa.fa-facebook
+					a(href="#").social-box.fa.fa-twitter
+					a(href="#").social-box.fa.fa-google-plus
+				i.fa.fa-circle
+				+png("ico_comment")
+				a(href="#") 10
+				i.fa.fa-circle
+				a(href="#") ESPECTÁCULOS
+				i.fa.fa-circle
+				i.fa.fa-youtube-play
+
+mixin boxnewstwo(title, img, mediaparrafo)
+	.boxnews
+		p.newsdate Hace 1 hora 12 mins
+		h4= title
+		.media
+			.media-left
+				+jpg(img)
+			.media-body
+				p= mediaparrafo
+				.social-news
+					a(href="#").social-box.fa.fa-facebook
+					a(href="#").social-box.fa.fa-twitter
+					a(href="#").social-box.fa.fa-google-plus
+				i.fa.fa-circle
+				+png("ico_comment")
+				a(href="#") 0
+				i.fa.fa-circle
+				a(href="#") AREQUIPA
+
+mixin firstboxnew()
+	+boxnews("Emma Watson protagonizará 'La bella y la bestia' | VIDEO", "img_news", "La actriz Emma Watson fue confirmada por Disney como la protagonista de 'La bella y la bestia' en la versión de carne y hueso")
+	+boxnewstwo("Roque Benavides respalda proyecto Tía María y espera que Conga se socialice", "img_news_2", "Zenaida Condori Contreras Arequipa para el presidente de la compañía de Minas Buenaventura, Roque Benavides, el proyecto Tía María, que promueve Southern Perú, ya debe...")
+	+boxnews("YouTube: hombre finge ahogarse y su perro lo rescata | FOTOS", "img_news_3", "La actriz Emma Watson fue confirmada por Disney como la protagonista de 'La bella y la bestia' en la versión de carne y hueso")
+	+boxnewstwo("Real Madrid: Cristiano Ronaldo fue sancionado condos partidos y si estará contra el Atlético de Madrid", "img_news_4", "Después de la pésima actitud de Cristiano Ronaldo, al agredir a Edimar en el partido del cuadro madridista contra el Córdoba, el Comité de Competición ha llegado a la...")
+
+mixin autorcol1()
+	.columns
+		.borderimg
+			+jpg("img-columnistas")
+		p.colautor Mario Vargas Llosa
+		p.coltitle <b>Megarrenuncia apulplinante</b>
+
+mixin autorcol2()
+	.columns
+		.borderimg
+			+jpg("img_blogueros")
+		p.colautor Augusto Álvarez Rodrich
+		p.coltitle <b>Respuesta a una derrota estridente</b>
+
+mixin autorslide()
+	+autorcol1()
+	+autorcol2()
+	+autorcol1()
+	+autorcol2()
+	+autorcol1()
+	+autorcol2()
+
+mixin jpgmedia2(imgjpg2)
+	img.img-responsive(src="assets/image/" + imgjpg2 + ".jpg")
+
+mixin pngmedia2(imgpng2)
+	img.img-responsive(src="assets/image/" + imgpng2 + ".png")
+
+mixin mediaside(imgjpg2, textaside)
+	.boxblog
+		.media
+			.media-left
+				a(href="#")
+					img.media-object(src="assets/image/" + imgjpg2 + ".jpg")
+			.media-body
+			p.text= textaside
+
+mixin namefotos(imgjpg2, text)
+	.boxblog
+		.media
+			.media-left
+				a(href="#")
+				img.media-object(src="assets/image/" + imgjpg2 + ".jpg")
+			.media-body
+				p= text
+
+mixin bloqueros(imgjpg2, nombre, parrafo)
+	.boxblog
+		.media
+			.media-left
+				a(href="#")
+					img.media-object(src="assets/image/" + imgjpg2 + ".jpg")
+			.media-body
+				a= nombre
+				p= parrafo
+
+mixin newpaper(imgjpg2, tittle, parrafo)
+	.boxblog
+		.media
+			.media-left
+				a(href="#")
+					img.media-object(src="assets/image/" + imgjpg2 + ".jpg")
+			.media-body
+				p= tittle
+				a.red= parrafo
+
+mixin namefotos2(imgjpg2, text)
+	a(href="#")
+		img.img-responsive(src="assets/image/" + imgjpg2 + ".jpg")
+	p.whitetext= text
+
+mixin section(titulo, subtittle)
+		h1= titulo
+		h3= subtittle
+			i.fa.fa-angle-double-down
+
+mixin jpgmedia(imgjpg)
+	img.media-object(src="assets/image/" + imgjpg + ".jpg")
+
+mixin pngmedia(imgpng)
+	img.media-object(src="assets/image/" + imgpng + ".png")
+
+mixin media(imgjpg, text, textblog)
+	.boxblog.absolute
+		.media
+			.media-left
+				a(href="#")
+					img.media-object(src="assets/image/" + imgjpg + ".jpg")
+			.media-body
+				h5.media-heading= textblog
+				p.text= text
+
+mixin blogstwo(blogname2,imgjpg, text, textblog)
+	.col-md-5
+		.relative
+			.blogs
+				p Lunes, 14 de julio de 2015
+				h4= blogname2
+			+media(imgjpg, text, textblog)
+
+mixin blogs(blogname, imgjpg, text, text2, text3, imgjpg2, imgjpg3, textblog, textblog2, textblog3)
+	.row
+		.col-md-5
+			.relative
+				.blogs
+					p Lunes, 14 de julio de 2015
+					h4= blogname
+				+media(imgjpg, text, textblog)
+		+blogstwo("Dios ha muerto... tengo las manos cubiertas de sangre",imgjpg2, text2, textblog2)
+		+blogstwo("¿Cuál es tu queso favorito?", imgjpg3, text3, textblog3)
+
+mixin columnistas(imgjpg, text, textblog)
+	.col-md-5.col-sm-8.col-xs-12
+		+media(imgjpg, text, textblog)

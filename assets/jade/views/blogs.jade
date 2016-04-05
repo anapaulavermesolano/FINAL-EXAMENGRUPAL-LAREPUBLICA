@@ -1,0 +1,31 @@
+include helpers/variables
+include helpers/mixins
+doctype html
+html(lang='es-PE')
+	head
+		title Blogs
+		include layouts/head
+		
+	body
+		include layouts/commonheader
+		#main
+			section#main_blogs.container-fluid
+				.row
+					.hidden-sm.col-md-2.asidebanner
+						+jpg("banner_left")
+					.col-md-12
+						+htmlnav(linkhtml)
+						+jpg("banner-header")
+						section#blogs
+							+section("Blogs", "LO ÚLTIMO EN BLOGS")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "LIBROS", "Ya lo pasado, PASADO", "Décimas Cosas", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "Y tú...  ¿Ya hiciste click?", "Educando con Amor Firme", "Moda entre Tendente", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "LIBROS", "Ya lo pasado, PASADO", "Décimas Cosas", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "Y tú...  ¿Ya hiciste click?", "Educando con Amor Firme", "Moda entre Tendente", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "LIBROS", "Ya lo pasado, PASADO", "Décimas Cosas", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "Y tú...  ¿Ya hiciste click?", "Educando con Amor Firme", "Moda entre Tendente", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+							+blogs("El gol de la muerte", "blog_avatar_01",  "LIBROS", "Ya lo pasado, PASADO", "Décimas Cosas", "blog_avatar_02", "blog_avatar_03", "BLOG", "BLOG", "BLOG")
+					.hidden-sm.col-md-2.asidebanner
+						+jpg("banner_right")
+		include layouts/footer
+		include layouts/script

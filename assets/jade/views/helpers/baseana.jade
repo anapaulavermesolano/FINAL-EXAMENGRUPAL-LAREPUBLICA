@@ -1,0 +1,48 @@
+//- VARIABLES
+
+//- MIXINS
+//-  &nbsp;
+mixin section(titulo, subtittle)
+    h1= titulo
+    h3= subtittle
+        i.fa.fa-angle-double-down
+mixin jpgmedia(imgjpg)
+    img.media-object(src="assets/image/" + imgjpg + ".jpg")
+mixin pngmedia(imgpng)
+    img.media-object(src="assets/image/" + imgpng + ".png")
+mixin media(imgjpg, text, textblog)
+    .boxblog.absolute
+        .media
+            .media-left
+                a(href="#")
+                    img.media-object(src="assets/image/" + imgjpg + ".jpg")
+            .media-body
+                h5.media-heading= textblog
+                p.text= text
+mixin blogstwo(blogname2,imgjpg, text, textblog)
+    .col-md-5
+        .relative
+            .blogs
+                p Lunes, 14 de julio de 2015
+                h4= blogname2
+            +media(imgjpg, text, textblog)
+mixin blogs(blogname, imgjpg, text, text2, text3, imgjpg2, imgjpg3, textblog, textblog2, textblog3)
+    .row
+        .col-md-5
+            .relative
+                .blogs
+                    p Lunes, 14 de julio de 2015
+                    h4= blogname
+                +media(imgjpg, text, textblog)
+        +blogstwo("Dios ha muerto... tengo las manos cubiertas de sangre",imgjpg2, text2, textblog2)
+        +blogstwo("¿Cuál es tu queso favorito?", imgjpg3, text3, textblog3)
+mixin columnistas(imgjpg, text, textblog)
+    .col-md-4.col-sm-8.col-xs-16
+        +media(imgjpg, text, textblog)
+
+-var headernav = [{name:'TODOS', url:'#'},{name:'A B C', url:'#'},{name:'D E F', url:'#'},{name:'G H I', url:'#'},{name:'J K L', url:'#'},{name:'M N O', url:'#'},{name:'PQRS', url:'#'},{name:'T U V', url:'#'},{name:'WXYZ', url:'#'}]
+
+mixin headernavbar(navbarred)
+    .list-group-1.list-group-2
+        each navbar in headernav
+                a.list-group-item-a(href='#{navbar.url}') #{navbar.name}
